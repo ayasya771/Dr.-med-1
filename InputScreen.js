@@ -13,7 +13,6 @@ export default class InputScreen extends React.Component {
       isLoading: false,
       name : "loading...",
       category :'',
-      matter : "",
       simpleDiagnosis : ""
 
     };
@@ -27,7 +26,7 @@ export default class InputScreen extends React.Component {
      var matter=dictionary[text]["matter"]
      var simpleDiagnosis=dictionary[text]["simpleDiagnosis"]
      this.setState({
-       "name":name,
+       "name":text,
        "category":category,
        "matter":matter,
        "simpleDiagnosis":simpleDiagnosis
@@ -52,6 +51,7 @@ export default class InputScreen extends React.Component {
             text: 'Dr.Med',
             style: { color: 'white', fontSize: 20 },
           }}
+          
         />
           <ScrollView>
          <SafeAreaView style={styles.droidSafeArea} />
@@ -110,28 +110,18 @@ export default class InputScreen extends React.Component {
                       {this.state.category}
                     </Text>
                   </View>
-                  <View style={{flexDirection:'row',flexWrap: 'wrap'}}>
-                    <Text style={styles.detailsTitle}>
-                      Matter :{" "}
-                    </Text>
-                    <Text style={{ fontSize:18}}>
-                      {this.state.matter}
-                    </Text>
-                  </View>
+                  
                   <View style={styles.detailsContainer}>
                     <Text style={styles.simpleDiagnosis}>
                       simpleDiagnosis:{"  "}
                     </Text>
-                    <Text style={{fontSize:18}}>
+                    <Text style={{fontSize:20}}>
                       {this.state.simpleDiagnosis}
                     </Text>
                     
               </View>
-              <Text style={{marginTop:20,marginLeft:35,marginRight:10}}>
-                Note-: Even after checking this info,
-              </Text>
-              <Text style={{marginBottom:30,marginRight:10,marginLeft:35}}>
-              please consult your doctor about the same also.
+              <Text style={{marginTop:20,marginLeft:200,marginRight:10,fontSize:18,fontWeight:8,marginBottom:50}}>
+                Note-: Even after checking this info, please consult your doctor about the same also.
               </Text>
                 </View>
     
@@ -200,6 +190,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     marginLeft:25,
     marginRight:15,
+    marginBottom:40,
   },
   detailsTitle:{
     color:'white',
@@ -212,7 +203,7 @@ const styles = StyleSheet.create({
     color:'white',
     fontSize:20,
     fontWeight:'bold',
-    marginTop:20,
+
     marginBottom:30,
     marginLeft:60,
     marginRight:40,

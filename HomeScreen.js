@@ -52,18 +52,18 @@ const styles = StyleSheet.create({
     borderColor:"white",
   },
   searchButton: {
-    width: '60%',
+    width: '30%',
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft:350,
-    marginTop:30,
+    marginLeft:575,
+    
     borderWidth: 2,
     borderRadius: 10,
     backgroundColor:'yellow',
   },
   searchText:{
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 });
